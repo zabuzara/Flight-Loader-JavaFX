@@ -1,0 +1,388 @@
+* {
+	-fx-font-family: FreeMono;	
+}
+
+
+BorderPane.rootPane {
+	-fx-border-color: black;
+/* 	-fx-background-insets: 10; 
+	-fx-background-radius: 5;
+	-fx-effect: dropshadow(three-pass-box, derive(black, -20%), 10, 0, 4, 4); 
+ */}
+
+
+Label {
+	-fx-font-size: 16;
+}
+
+
+VBox.loaderInnerPane {
+	-fx-padding: 5;
+	
+}
+
+
+Tab {
+    -fx-padding: 10 10 0 10;
+}
+
+
+#rootPane .tab-header-background{
+	-fx-background-color: #ffffff;	
+}
+
+
+BorderPane.tableOuterPane {
+	-fx-background-color: linear-gradient(to bottom, #00e3e3, white);
+	-fx-pref-width: 350;
+	-fx-alignment: center;
+	-fx-spacing: 30;
+}
+
+
+#loginTab:disabled,
+#loginTab:disabled .loginTabLabel,
+#databasesTab:disabled,
+#databasesTab:disabled .databasesTabLabel,
+#tablesTabsTab:disabled ,
+#tablesTabsTab:disabled .tablesTabLabel{
+	-fx-cursor: default;
+}
+
+
+#loginTab,
+#loaderTab,
+#tablesTab,
+#reloadTab,
+#tableTab{
+	-fx-background-color: transparent;
+	/* -fx-border-radius: 10 10 0 0; */
+	-fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+   	-fx-padding: 5 0 0 0;
+ 	-fx-border-color: transparent;
+}
+
+
+Label.loginTabLabel,
+Label.loaderTabLabel,
+Label.tablesTabLabel,
+Label.tableTabLabel{
+	-fx-background-color: linear-gradient(to bottom, rgba(2,0,36,1) 0%, rgba(122,245,255,1) 0%, rgba(149,247,255,1) 4%, rgba(175,249,255,1) 17%, rgba(198,251,255,1) 32%, rgba(231,253,255,1) 53%, rgba(247,254,255,1) 70%, rgba(255,255,255,1) 81%);
+	-fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+   	-fx-padding: 5 10 10 10;
+ 	-fx-border-color: transparent;
+	-fx-font-size: 18;
+} 
+
+
+Label.loginTabLabel.canBeHovered,
+Label.loaderTabLabel.canBeHovered,
+Label.tablesTabLabel.canBeHovered,
+Label.tableTabLabel.canBeHovered{
+	-fx-cursor: open-hand;
+}
+
+
+Label.loginTabLabel.canBeHovered:hover,
+Label.loaderTabLabel.canBeHovered:hover,
+Label.tablesTabLabel.canBeHovered:hover,
+Label.tableTabLabel.canBeHovered:hover{
+	-fx-font-weight: bold;
+}
+
+
+Label.tableTabLabel:hover {
+	-fx-font-weight: bold;
+}
+
+
+Button.reloadTabButton {
+	-fx-background-color: green;
+	-fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+   	-fx-padding: 5 10 10 10;
+ 	-fx-border-color: transparent;
+ 	-fx-border-radius:200;
+	-fx-cursor: open-hand;
+	-fx-text-fill: #ddffdf;
+	-fx-font-size: 18;
+	-fx-font-weight:bold;
+} 
+
+
+Button.reloadTabButton:hover,
+Button.reloadTabButton:focused {
+	-fx-background-color: #4e9a06;
+}
+
+
+Label.loaderTabLabel.notActive,
+Label.tablesTabLabel.notActive,
+Label.tableTabLabel.notActive{
+	-fx-background-color: #dbe6e8;
+}
+
+
+Label.loginTabLabel.logout {
+	-fx-background-color: #cc3333;
+	-fx-text-fill: #ffeeee;
+	-fx-font-weight:bold;
+}
+
+
+Label.loginTabLabel.logout:hover,
+Label.loginTabLabel.logout:focused {
+	-fx-background-color: #ff0000;
+	-fx-text-fill: #ffd2d2;
+	-fx-font-weight:bold;
+}
+
+
+VBox.loginOuterPane {
+	-fx-pref-width: 350;
+	-fx-alignment: center;
+	-fx-spacing: 30;
+}
+
+
+BorderPane.loaderOuterPane {
+	-fx-pref-width: 350;
+	-fx-alignment: center;
+	-fx-spacing: 30;
+	-fx-padding: 0 0 0 0;
+}
+
+
+GridPane.loginInnerPane {
+	-fx-pref-width: 350;
+	-fx-alignment: center;
+	-fx-hgap: 5;
+	-fx-vgap: 5;
+}
+
+
+Label.infoLabel {
+	-fx-pref-width: inherit;
+	-fx-pref-height: 100;
+	-fx-font-family: Verdana;
+	-fx-font-size: 18;
+	-fx-padding: 2 5 2 5;
+	-fx-text-alignment: justify;
+	-fx-wrap-text: true;
+	-fx-content-display:top;
+	-fx-text-fill: #555753;
+	-fx-border-insets: 1;
+	-fx-border-color: #555753;
+ 	-fx-border-style: solid; 
+ 	-fx-border-radius: 5;
+}
+
+
+Label.usernameLabel,
+Label.passwordLabel {
+	-fx-font-family: FreeMono;
+	-fx-font-size: 25;
+	-fx-text-fill: #2e3436;
+}
+
+
+TextField.usernameTextField,
+PasswordField.passwordPasswordField {
+	-fx-font-family: FreeMono;
+	-fx-font-size: 20;
+	-fx-pref-width: 200;
+	-fx-pref-height: 30;
+	-fx-focus-color: -fx-control-inner-background;
+    -fx-faint-focus-color: -fx-control-inner-background;
+}
+
+
+TextField.usernameTextField:focused,
+PasswordField.passwordPasswordField:focused {
+	-fx-focus-color:#3465a4;
+    -fx-faint-focus-color: transparent;
+}
+
+
+Button.loginSubmitButton {
+	-fx-pref-width: 100;
+	-fx-pref-height: 50;
+	-fx-font-family: FreeMono;
+	-fx-font-size: 20;
+	-fx-font-weight: bold;
+	-fx-padding: 2 5 2 5;
+	-fx-text-fill: white;
+	-fx-background-color: #11b9cd;
+	-fx-cursor: open-hand;
+}
+
+
+Button.loginSubmitButton:hover {
+	-fx-background-color: #01e1e2;
+}
+
+
+Button.loginSubmitButton:focused {
+	-fx-background-color: #01e1e2;
+}
+
+
+Label.loginAuthorInfo {
+	-fx-padding: 0 5;
+	-fx-text-fill: #2e3436;
+}
+
+
+Label.loaderAuthorInfo,
+Label.tableAuthorInfo {
+	-fx-padding: 0;
+	-fx-text-fill: #2e3436;
+	-fx-pref-height: 10;
+}
+
+
+.table .column-header-background .label{
+	-fx-background-color: #f4f4f4;
+	-fx-text-fill: #003e33;
+	-fx-font-weight: normal;
+	-fx-font-size:16;
+	-fx-padding:0;
+}
+
+
+.table .column-header-background .filler {
+	-fx-background-color: #f4f4f4;
+	-fx-border-color:transparent;
+	-fx-border-inset: 0 1 0 0;
+}
+
+
+.table .nested-column-header .column-header{
+	-fx-background-color: #f4f4f4;
+	-fx-border-color: transparent gray transparent transparent;
+	-fx-border-inset: 0 1 0 0;
+	-fx-padding:0;
+}
+
+
+Region.column-overlay{
+	-fx-border-color:#f4f4f4;
+	-fx-background-color: #f4f4f4;
+}
+
+
+.table,
+.tableOuterPane,
+#tablesTabPane {
+	-fx-border-inset:0;
+	-fx-background-color: #f4f4f4;
+}
+
+
+.scroll-pane{
+ 	-fx-background-color: transparent;
+ 	-fx-border-width:1;
+ 	-fx-border-color:#38549902;
+}
+
+.table-view {
+	-fx-selection-bar:#d7fbff;
+	-fx-selection-bar-non-focused:#d7fbff;
+	-fx-font-size: 16;
+}
+
+.scroll-pane > .corner ,
+.table-view .virtual-flow .corner {
+    -fx-background-color: transparent;
+}
+
+
+.scroll-pane > .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical{
+	-fx-pref-width: 10;
+    -fx-background-color: #38549902;	
+    -fx-font-size: 1px;
+    -fx-text-fill: #38549902;
+}
+
+
+.scroll-pane > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal{
+	-fx-pref-height: 10;
+    -fx-background-color: #38549902;
+    -fx-font-size: 1px;
+    -fx-text-fill: #38549902;	
+}
+
+
+.scroll-pane > .scroll-bar:vertical >  .thumb ,
+.scroll-pane > .scroll-bar:horizontal >  .thumb,
+.table-view .virtual-flow .scroll-bar:vertical >  .thumb ,
+.table-view .virtual-flow .scroll-bar:horizontal >  .thumb {
+    -fx-background-color: #2e3436;
+}
+
+
+.scroll-pane > .scroll-bar:vertical >  .thumb:hover ,
+.scroll-pane > .scroll-bar:horizontal >  .thumb:hover,
+.table-view .virtual-flow  .scroll-bar:horizontal >  .thumb:hover,
+.table-view .virtual-flow  .scroll-bar:horizontal >  .thumb:hover {
+    -fx-cursor: open-hand;
+}
+
+
+.scroll-pane > .scroll-bar:vertical:hover >  .thumb ,
+.scroll-pane > .scroll-bar:vertical:focused >  .thumb ,
+.scroll-pane > .scroll-bar:vertical:pressed >  .thumb,
+.table-view .virtual-flow .scroll-bar:vertical:hover >  .thumb ,
+.table-view .virtual-flow .scroll-bar:vertical:focused >  .thumb ,
+.table-view .virtual-flow .scroll-bar:vertical:pressed >  .thumb {
+    -fx-background-color: #2e3436;
+    -fx-pref-width: 10;
+}
+
+
+.scroll-pane > .scroll-bar:horizontal:hover >  .thumb,
+.scroll-pane > .scroll-bar:horizontal:focused >  .thumb,
+.scroll-pane > .scroll-bar:horizontal:pressed >  .thumb,
+.table-view .virtual-flow .scroll-bar:horizontal:hover >  .thumb,
+.table-view .virtual-flow .scroll-bar:horizontal:focused >  .thumb,
+.table-view .virtual-flow .scroll-bar:horizontal:pressed >  .thumb {
+    -fx-background-color: #2e3436;
+    -fx-pref-height: 10;
+}
+
+
+.scroll-pane > .scroll-bar:vertical >  .track ,
+.scroll-pane > .scroll-bar:horizontal >  .track,
+.table-view .virtual-flow .scroll-bar:vertical >  .track ,
+.table-view .virtual-flow .scroll-bar:horizontal >  .track {
+    -fx-background-color: #ffffff05;
+}
+
+
+.scroll-pane > .scroll-bar:vertical .decrement-button ,
+.scroll-pane > .scroll-bar:vertical .increment-button ,
+.scroll-pane > .scroll-bar:horizontal .decrement-button ,
+.scroll-pane > .scroll-bar:horizontal .increment-button ,
+.table-view .virtual-flow .scroll-bar:vertical .decrement-button ,
+.table-view .virtual-flow .scroll-bar:vertical .increment-button ,
+.table-view .virtual-flow .scroll-bar:horizontal .decrement-button ,
+.table-view .virtual-flow .scroll-bar:horizontal .increment-button {
+    -fx-background-color: transparent;
+    -fx-text-fill:transparent;
+    -fx-font-size: 0.1px;
+}
+
+
+.loaderButton {
+	-fx-font-weight: bold;
+	-fx-cursor: open-hand;
+}
+
+
+Label.errorMessage {
+	-fx-text-fill: red;
+}

@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"com.ome.flight.tools","c":"CustomStageStyle","l":"CustomStageStyle(Scene, String, String, double)","url":"%3Cinit%3E(javafx.scene.Scene,java.lang.String,java.lang.String,double)"}]

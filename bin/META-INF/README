@@ -1,0 +1,108 @@
+Run Command as user (!! not root)
+/usr/lib/jvm/java-11-openjdk-amd64/bin/java -Dfile.encoding=UTF-8 -p /home/zabuzara/Desktop/Damago/12.Module.Java/lib/javafx-sdk-17.0.2/lib/javafx.base.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib/javafx-sdk-17.0.2/lib/javafx.controls.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib/javafx-sdk-17.0.2/lib/javafx.fxml.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib/javafx-sdk-17.0.2/lib/javafx.graphics.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib/javafx-sdk-17.0.2/lib/javafx.media.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib/javafx-sdk-17.0.2/lib/javafx.swing.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib/javafx-sdk-17.0.2/lib/javafx.web.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib/javafx-sdk-17.0.2/lib/javafx-swt.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib/jdbc-mysql-8.0/mysql-connector-java-8.0.28.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/Workspace/flight-loader/bin -classpath /home/zabuzara/Desktop/Damago/12.Module.Java/lib2/httpcomponents-client-5.1.3-bin/lib/slf4j-api-1.7.25.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib2/httpcomponents-client-5.1.3-bin/lib/rxjava-2.2.8.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib2/httpcomponents-client-5.1.3-bin/lib/reactive-streams-1.0.3.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib2/httpcomponents-client-5.1.3-bin/lib/jna-platform-5.2.0.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib2/httpcomponents-client-5.1.3-bin/lib/jna-5.2.0.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib2/httpcomponents-client-5.1.3-bin/lib/httpcore5-testing-5.1.3.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib2/httpcomponents-client-5.1.3-bin/lib/httpcore5-reactive-5.1.3.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib2/httpcomponents-client-5.1.3-bin/lib/httpcore5-h2-5.1.3.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib2/httpcomponents-client-5.1.3-bin/lib/httpcore5-5.1.3.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib2/httpcomponents-client-5.1.3-bin/lib/httpclient5-win-5.1.3.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib2/httpcomponents-client-5.1.3-bin/lib/httpclient5-testing-5.1.3.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib2/httpcomponents-client-5.1.3-bin/lib/httpclient5-fluent-5.1.3.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib2/httpcomponents-client-5.1.3-bin/lib/httpclient5-cache-5.1.3.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib2/httpcomponents-client-5.1.3-bin/lib/httpclient5-5.1.3.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib2/httpcomponents-client-5.1.3-bin/lib/commons-codec-1.15.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib2/httpcomponents-client-5.1.3-bin/lib/commons-cli-1.4.jar:/home/zabuzara/Desktop/Damago/12.Module.Java/lib2/slf4j-jdk14-1.7.9.jar -m com.ome.flight.model/com.ome.flight.view.FlightApp
+
+Available parameters:
+	 --headless
+	 --debug
+	 --interval=[0-9]
+	 --search=[both|arival|departure]
+	 --help, -h
+	 
+Used libraries:
+ 	javafx-sdk-17.0.2
+ 	jdbc-mysql-8.0
+ 	httpcomponents-client-5.1.3
+ 	
+Packages:
+----com.ome.flight.controller
+----com.ome.flight.model
+----com.ome.flight.view
+----com.ome.flight.tools
+
+Classes in: com.ome.flight.controller.*
+			LoaderController.java
+			LoginController.java
+			RootController.java
+			TablesController.java
+			
+Classes in: com.ome.flight.model.*
+			Airport.java
+			Arrival.java
+			Departure.java
+			Equipment.java
+			Flight.java
+			Terminal.java
+			Gate.java
+			FlightStatus.java
+			TimeStatus.java
+			FlightLoader.java
+			Airports.java <Enum>
+			FlightDateTime.java <Abstract>			
+			
+Classes in: com.ome.flight.view.*
+			FlightApp.java
+			
+Classes in: com.ome.flight.tools.*
+			Controller.java <Abstract>
+			ParentController <Abstract>		
+			ChildController <Abstract>
+			HashCodes.java	!author: Chef-Programmer
+			JSON.java	!author: Chef-Programmer
+			NumeralSystems.java	!author: Chef-Programmer
+			RelationalDatabases.java 
+			UncheckedSQLException.java	!author: Chef-Programmer
+			CustomStageStyle.java
+			Copyright.java <Annotaion>	!author: Chef-Programmer
+			
+Der Name der Application:
+	Automatic-Flight-Loader abgekürzt AFL
+	
+Sie startet je nach bedarf mit einer GUI oder in der Kommandozeile.
+
+
+Für start in der Kommandozeile wurden ein paar
+nützliche Optionen vorgesehen wie folgendes:
+
+	--headless		verzichtet man auf dieses Kommando wird AFL mit der GUI starten
+					
+	--debug			ermöglicht eine ausfürliche Ausgabe in Konsole, es wird folgende
+					Informationen angezeigt:
+							-	Startzeit der AFL,
+							-	Protokol des Ladens den Token,
+							-	Flugdaten als JSON für jeden einzelnen Flug,
+							-	Flughafeninformationen falls Flughafen nicht in der Airport-Klasse vorhanden ist,
+							-	Anzahl der geladene Flüge für jede Abfrage an die Lufthansa-API,
+							-	Commit-Antwort von der Datenbank, wenn die Daten in Tabllen gespeichert werden,
+							-	Einen Flugzähler, der zeigt wie viele von der bei einer Abfrage geladenen Flüge gespeichert sind
+								und wie viele sich noch vor dem Schreibprozess befinden.
+							-	Eine echtzeit meldung, falls die Internet-Verbindung unterbrochen wurde,
+							-	Stacktrace, falls eine Ausnahme geworfen würde
+					Wenn diese Option nicht verwendet wäre, würde die AFL in Still-Modus starten.
+					
+	--interval		damit definiert Anwender/in eine Intervallzeit fürs Laden der Daten von der API
+					bzw. die Wartezeit zwischen die Abfragen. Es werden nur numerische Werte akzeptiert und
+					minimum Wert ist auf 5 Sekunden definiert. Falls man diese Option weglässt wird 5 Sekunden als
+					standard Intervallzeit ausgewählt.
+					
+	--search		Da die zugeladene Daten von der API sowohl für Abflug-Flughafen als auch für Ankunft-Flughafen
+					beinhalten, würde von der Entwickler diese Option definiert. Diese hilft, falls die AFL nur die
+					Daten für Abflug-Flughafen (departure), Ankunft-Flughafen (arrival) oder beides (both) geladen
+					werden sollten. Beispiel:	--search=arrival,	--search=departure,	--search=both	.
+					Standardmäßig wird die AFL both auswählen, fall diese Option nicht benutzt wird.
+					
+	--help, -h		Zeigt die mögliche Optionen, die der/die Anwender/in zu wählen hat und falls falsche Optionen bzw.
+					nicht existierenden Optionen angegeben werden wird diese noch mal in die Konsole angezeigt.
+							
+							
+							
+							
+							
+							 
+								
+	
+	
+	
+	
+	
+	
+	
